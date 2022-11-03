@@ -1,4 +1,4 @@
-import { RouterDataFeedsConfig } from ".";
+import { RouterDataFeedsConfig } from "./types";
 
 export const dataFeedsRouter: RouterDataFeedsConfig = {
   "abi": "./src/abi/WitnetPriceRouter.json",
@@ -229,56 +229,56 @@ export const dataFeedsRouter: RouterDataFeedsConfig = {
             }
           }
         },
-        "celo.mainnet": {
-          "mainnet": true,
-          "address": "0x931673904eB6E69D775e35F522c0EA35575297Cb",
-          "blockExplorer": "https://explorer.celo.org/address/{address}",
-          "color": "#ff8100",
-          "name": "Celo Mainnet",
-          "pollingPeriod": 45000,
-          "feeds": {
-            "Price-CELO/EUR-6": {
-              "label": "€",
-              "deviationPercentage": 1.0,
-              "maxSecsBetweenUpdates": 86400,
-              "minSecsBetweenUpdates": 900
-            },
-            "Price-CELO/USD-6": {
-              "label": "$",
-              "deviationPercentage": 1.0,
-              "maxSecsBetweenUpdates": 86400,
-              "minSecsBetweenUpdates": 900
-            },
-            "Price-BTC/USD-6": {
-              "label": "$",
-              "deviationPercentage": 3.5,
-              "maxSecsBetweenUpdates": 86400,
-              "minSecsBetweenUpdates": 3600
-            },
-            "Price-ETH/USD-6": {
-              "label": "$",
-              "deviationPercentage": 3.5,
-              "maxSecsBetweenUpdates": 86400,
-              "minSecsBetweenUpdates": 3600
-            },
-            "Price-IMMO/MCUSD-6": {
-              "label": "$",
-              "deviationPercentage": 1.0,
-              "maxSecsBetweenUpdates": 86400,
-              "minSecsBetweenUpdates": 3600
-            },
-            "Price-NCT/CELO-6": {
-              "label": " ",
-              "deviationPercentage": 3.5,
-              "maxSecsBetweenUpdates": 86400,
-              "minSecsBetweenUpdates": 3600
-            },
-            "Price-NCT/USD-6": {
-              "isRouted": true,
-              "label": "$"
-            }
-          }
-        }
+        // "celo.mainnet": {
+        //   "mainnet": true,
+        //   "address": "0x931673904eB6E69D775e35F522c0EA35575297Cb",
+        //   "blockExplorer": "https://explorer.celo.org/address/{address}",
+        //   "color": "#ff8100",
+        //   "name": "Celo Mainnet",
+        //   "pollingPeriod": 45000,
+        //   "feeds": {
+        //     "Price-CELO/EUR-6": {
+        //       "label": "€",
+        //       "deviationPercentage": 1.0,
+        //       "maxSecsBetweenUpdates": 86400,
+        //       "minSecsBetweenUpdates": 900
+        //     },
+        //     "Price-CELO/USD-6": {
+        //       "label": "$",
+        //       "deviationPercentage": 1.0,
+        //       "maxSecsBetweenUpdates": 86400,
+        //       "minSecsBetweenUpdates": 900
+        //     },
+        //     "Price-BTC/USD-6": {
+        //       "label": "$",
+        //       "deviationPercentage": 3.5,
+        //       "maxSecsBetweenUpdates": 86400,
+        //       "minSecsBetweenUpdates": 3600
+        //     },
+        //     "Price-ETH/USD-6": {
+        //       "label": "$",
+        //       "deviationPercentage": 3.5,
+        //       "maxSecsBetweenUpdates": 86400,
+        //       "minSecsBetweenUpdates": 3600
+        //     },
+        //     "Price-IMMO/MCUSD-6": {
+        //       "label": "$",
+        //       "deviationPercentage": 1.0,
+        //       "maxSecsBetweenUpdates": 86400,
+        //       "minSecsBetweenUpdates": 3600
+        //     },
+        //     "Price-NCT/CELO-6": {
+        //       "label": " ",
+        //       "deviationPercentage": 3.5,
+        //       "maxSecsBetweenUpdates": 86400,
+        //       "minSecsBetweenUpdates": 3600
+        //     },
+        //     "Price-NCT/USD-6": {
+        //       "isRouted": true,
+        //       "label": "$"
+        //     }
+        //   }
+        // }
       }
     },
     // "conflux": {
@@ -729,26 +729,26 @@ export const dataFeedsRouter: RouterDataFeedsConfig = {
     //     }
     //   }
     // },
-    // "dogechain": {
-    //   "name": "Dogechain",
-    //   "networks": {
-    //     "dogechain.testnet": {
-    //       "address": "0x9E943Ab1FD0D35B3BaDe31AA78D60C485EA1a604",
-    //       "blockExplorer": "https://explorer-testnet.dogechain.dog/address/{address}",
-    //       "color": "#f6006f",
-    //       "name": "Dogechain Testnet",
-    //       "pollingPeriod": 45000,
-    //       "feeds": {
-    //         "Price-DOGE/USD-6": {
-    //           "label": "$",
-    //           "deviationPercentage": 1.0,
-    //           "maxSecsBetweenUpdates": 86400,
-    //           "minSecsBetweenUpdates": 900
-    //         }
-    //       }
-    //     }
-    //   }
-    // },
+    // // "dogechain": {
+    // //   "name": "Dogechain",
+    // //   "networks": {
+    // //     "dogechain.testnet": {
+    // //       "address": "0x9E943Ab1FD0D35B3BaDe31AA78D60C485EA1a604",
+    // //       "blockExplorer": "https://explorer-testnet.dogechain.dog/address/{address}",
+    // //       "color": "#f6006f",
+    // //       "name": "Dogechain Testnet",
+    // //       "pollingPeriod": 45000,
+    // //       "feeds": {
+    // //         "Price-DOGE/USD-6": {
+    // //           "label": "$",
+    // //           "deviationPercentage": 1.0,
+    // //           "maxSecsBetweenUpdates": 86400,
+    // //           "minSecsBetweenUpdates": 900
+    // //         }
+    // //       }
+    // //     }
+    // //   }
+    // // },
     // "ethereum": {
     //   "name": "Ethereum",
     //   "networks": {
